@@ -106,9 +106,9 @@
 </head>
 
 <body>
-	<div class="header">
-		Youtube Video Downloader App
-	</div>
+	<center>
+		<h1>Baixe videos do youtube aqui!</h1>	
+	</center>
 	<div class="form">
 		<div class="form-element">
 			<label for="videoURL">Enter Youtube Video Link</label>
@@ -146,7 +146,7 @@
 		document.querySelector("#get-video-info-btn").addEventListener("click", function () {
 			let videoURL = document.querySelector("#videoURL").value.trim();
 			if (videoURL.length == 0) {
-				alert("Please enter youtube video link");
+				alert("Por favor, insira o link do vídeo do youtube");
 				return;
 			}
 			fetch(host + "videoInfo?videoURL=" + videoURL).then(function (response) {
@@ -188,7 +188,7 @@
 
 				}
 			}).catch(function (error) {
-				alert("Something went wrong");
+				alert("Algo deu errado");
 			})
 		});
 
